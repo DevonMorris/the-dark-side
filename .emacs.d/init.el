@@ -150,9 +150,11 @@
   (setq evil-want-C-u-scroll t)
   (setq evil-want-C-d-scroll t)
   (setq evil-want-C-i-jump t)
+  (setq evil-want-Y-yank-to-eol t)
   :config
   (evil-mode 1)
-  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state))
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  (define-key evil-normal-state-map (kbd "C-j") 'evil-switch-to-windows-last-buffer))
 
 ;; Highlight on evil-yank (vim)
 (use-package pulse)
